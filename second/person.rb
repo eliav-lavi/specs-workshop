@@ -1,4 +1,4 @@
-class PersonTwo
+class Person
   attr_reader :first_name, :last_name, :education_level
 
   def initialize(first_name, last_name, education_level = 0)
