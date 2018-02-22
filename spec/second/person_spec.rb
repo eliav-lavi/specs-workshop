@@ -1,1 +1,3 @@
 require_relative '../../lib/second/person'
+
+# Your spec goes here...
