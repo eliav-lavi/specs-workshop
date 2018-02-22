@@ -1,7 +1,5 @@
 class Visa
-  attr_accessor :length_in_days, :used, :type
-
-  TYPES = PLEASURE_TYPES + BUSINESS_TYPES
+  attr_reader :length_in_days, :type
 
   PLEASURE_TYPES = [
       TOURIST_TYPE = 'tourist',
@@ -13,11 +11,16 @@ class Visa
       OUTSTANDING_ARTIST_TYPE = 'outstanding_artist'
   ]
 
+  def initialize(length_in_days, type = TOURIST_TYPE)
+    @length_in_days = length_in_days
+    @type = type
+  end
+
   def business_type?
     BUSINESS_TYPES.include? @type
   end
 
-  def pleasure_type?
-    PLEASURE_TYPES.include? @type || @type.nil?
+  def green_card_candidate?
+    @type == SPOUSE_TYPE && @length_in_days < 0
   end
 end
