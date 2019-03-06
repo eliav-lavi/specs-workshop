@@ -1,7 +1,7 @@
 require_relative '../../lib/third/visa'
 
 RSpec.describe Visa do
-	let(:visa) { described_class.new(length_in_days, type) }
+  let(:visa) { described_class.new(length_in_days, type) }
 
   describe '#business_type?' do
     let(:business_type?) { visa.business_type? }

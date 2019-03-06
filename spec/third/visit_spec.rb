@@ -1,7 +1,7 @@
 require_relative '../../lib/third/visit'
 
 RSpec.describe Visit do
-	let(:visit) { described_class.new(visa, length_in_days, is_business_trip) }
+  let(:visit) { described_class.new(visa, length_in_days, is_business_trip) }
 
   describe '#allowed?' do
     let(:allowed?) { visit.allowed? }
